@@ -50,6 +50,16 @@ make
 This will generate libcrashd.a on this project root
 be sure to have libcrashd.h on your project root, so your app can find the lib.
 
+Your project root can be like this:
+```
+├── src/
+│   ├── myapp.cpp
+├── include/
+│   ├── libcrashd.h
+├── lib/
+│   ├── libcrashd.a
+```
+
 # Usage
 
 Include Libcrashd-dev in your project:
