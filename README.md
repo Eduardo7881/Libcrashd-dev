@@ -55,16 +55,6 @@ Include Libcrashd-dev in your project:
 
 ```cpp
 #include "libcrashd.h"
-
-int main() {
-    void (*invalidFunc)() = nullptr;
-
-    if (!Libcrashd::IsFunctionValid((void*)invalidFunc)) {
-        Libcrashd::CrashDialogue("Fatal Error", "Invalid function call detected!", "Error: 9999-000");
-    }
-
-    return 0;
-}
 ```
 
 Compile your program with:
