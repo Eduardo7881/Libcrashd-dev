@@ -5,9 +5,17 @@ It provides crash dialogs, backtrace logging, and function validation for debugg
 
 ## Features
 ✅ **Crash dialog with GTK+3**
+
+
 ✅ **Error logging to `crashd.log`**
+
+
 ✅ **Backtrace generation**
+
+
 ✅ **Crash report generation**
+
+
 ✅ **Function validity checking**
 
 ## Installation
@@ -17,19 +25,19 @@ It provides crash dialogs, backtrace logging, and function validation for debugg
 sudo apt install libgtk-3-dev
 ```
 
-Linux (Arch)
+### Linux (Arch)
 
 ```sh
 sudo pacman -S gtk3
 ```
 
-macOS (Homebrew)
+### macOS (Homebrew)
 
 ```sh
 brew install gtk+3
 ```
 
-Build Instructions
+## Build Instructions
 
 Clone the repository and compile the library using make:
 
@@ -41,7 +49,7 @@ make
 
 This will generate libcrashd.a in the project root.
 
-Usage
+# Usage
 
 Include Libcrashd-dev in your project:
 
@@ -65,12 +73,16 @@ Compile your program with:
 g++ -o myapp myapp.cpp libcrashd.a $(pkg-config --cflags --libs gtk+-3.0)
 ```
 
-or use Make.
+or use 
+```sh
+make
+```
 
 
-Functions
 
-Crash Dialogue
+# Functions
+
+## Crash Dialogue
 
 ```cpp
 void Libcrashd::CrashDialogue(const std::string& title,
@@ -90,7 +102,7 @@ footer → Additional info (default: "Error: 0000-000")
 
 ---
 
-Crash Report
+## Crash Report
 
 ```cpp
 void Libcrashd::GenerateCrashReport(const std::string& reason);
@@ -101,7 +113,7 @@ void Libcrashd::GenerateCrashReport(const std::string& reason);
 
 ---
 
-Function Validation
+## Function Validation
 
 ```cpp
 bool Libcrashd::IsFunctionValid(void* func);
@@ -113,7 +125,7 @@ Returns false and logs an error if func is nullptr.
 
 ---
 
-# Backtrace
+## Backtrace
 
 ```cpp
 std::string Libcrashd::GetBacktrace();
