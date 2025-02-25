@@ -39,15 +39,16 @@ brew install gtk+3
 
 ## Build Instructions
 
-Clone the repository and compile the library using make:
+Clone the repository and build it:
 
 ```bash
-git clone https://github.com/yourusername/libcrashd-dev.git
+git clone https://github.com/Eduardo7881/Libcrashd-dev.git
 cd libcrashd-dev
 make
 ```
 
-This will generate libcrashd.a in the project root.
+This will generate libcrashd.a on this project root
+be sure to have libcrashd.h on your project root, so your app can find the lib.
 
 # Usage
 
@@ -62,13 +63,6 @@ Compile your program with:
 ```bash
 g++ -o myapp myapp.cpp libcrashd.a $(pkg-config --cflags --libs gtk+-3.0)
 ```
-
-or use 
-```sh
-make
-```
-
-
 
 # Functions
 
